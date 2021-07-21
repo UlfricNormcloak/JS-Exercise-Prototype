@@ -41,15 +41,42 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
-  
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.stomach = [];
 }
 
+Person.prototype.eat = function(edible){
+  if(this.stomach.length < 10){
+    this.stomach.push(edible);
+  }
+}
 
+Person.prototype.poop = function(){
+  this.stomach = [];
+}
 
+Person.prototype.toString = function(){
+  return `${this.name}, ${this.age}`;
+}
 
+const norman = new Person(`norman`, 42);
+const megan = new Person (`megan`, 40);
 
+norman.eat('food');
+norman.eat('food');
+norman.eat('food');
+norman.eat('food');
+norman.eat('food');
 
+console.log(norman.stomach);
+
+norman.poop();
+
+console.log(norman.stomach)
+
+console.log(norman.toString());
 
 /*
   TASK 2
@@ -86,9 +113,9 @@ function Baby() {
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
   1. 
-  2. 
-  3. 
-  4. 
+  2. Whenever there is a dot immediately before a function call, the object that immediately precedes the dot is what this is referencing.
+  3. When using a constructor function, this is making reference to the object created by the constructor
+  4. Explicit: 
 */
 
 
