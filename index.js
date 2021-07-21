@@ -129,10 +129,10 @@ Baby.prototype.play = function(){
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. Whenever there is a dot immediately before a function call, the object that immediately precedes the dot is what this is referencing.
-  3. When using a constructor function, this is making reference to the object created by the constructor
-  4. Explicit: 
+  1. Window/global: 'this' refers to the global console or window Object.
+  2. Implicit: Whenever there is a dot immediately before a function call, the object that immediately precedes the dot (to the left) is what 'this' is referencing.
+  3. New: When using a constructor function, 'this' is making reference to the object created by the constructor
+  4. Explicit: Binding of 'this' is deliberately applied with the use of the call() method or apply() method. 
 */
 
 
