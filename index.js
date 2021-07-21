@@ -99,6 +99,11 @@ function Car(model, milesPerGallon) {
   this.odometer = 0;
 }
 
+Car.prototype.fill = function(){
+  if(this.tank === 0);
+  return this.tank += 10;
+}
+
 
 /*
   TASK 3
